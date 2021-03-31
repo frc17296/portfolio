@@ -168,7 +168,7 @@ nav li a {
 	background: #f0f0f0;
 	padding: 10px; 
 	color: black;
-	height: 150px;
+	max-height: 200px;
 }
 
 #gallery .caption p {
@@ -193,15 +193,12 @@ nav li a {
 	height: 320px;
 }
 
-#about .container {
-		height: 300px;				
-	}
 
 
 #about img {
 	border-radius: 100%;
 	padding: 25px 0;
-	max-width: 200px;
+	max-width: 150px;
 }
 
 #about {
@@ -264,7 +261,7 @@ nav li a {
 footer.main {
 	text-align: center;	
 	padding: 15px;
-	height: 100px;
+	height: 100px;	
 }
 
 footer.main img {
@@ -274,27 +271,35 @@ footer.main img {
 
 footer.main a {
 	display: inline-block;
-	padding: 5px;
+	padding: 5px;	
 }
-
-footer.main p {
-  font-size: 10px;
-}
-
 
 @media only screen and (min-width: 768px) {
 
 	/*********** GALLERY ***********/
 
 	#gallery img {	  
-	  height: 170px;
+	  height: 100%;
 	}
 
 	#gallery .item {
-		flex: 0 1 33.3333%;
+		flex: 0 1 33.3333%;    
 	}
 
 	/*********** ABOUT ***********/
+
+	
+	#about {					
+		height: 500px;		
+	}
+
+	#about .about {
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+		padding: 50px 20px 50px 20px;
+		height: fit-content;	
+	}
   
 	#about img {
 		width: 70%;
@@ -307,7 +312,8 @@ footer.main p {
 		text-align: center;		
 	}
 
-	#about .description {
+	#about .description {	
+		flex-shrink: 1;	
 		float: right;
 		width: 50%;
 		padding: 30px 15px 15px 15px;
@@ -384,7 +390,22 @@ footer.main p {
 
 	nav {
 		background: #b3e6ff;;		
+	}	
+}
+
+@media only screen and (max-width: 767px) {
+  #about .about .profile-pic {
+		display: none;
 	}
+	
+	#contact .info {
+		padding-top: 0px;
+	}
+
+	footer {
+		display: none;
+	}
+	
 }
 
 
