@@ -206,12 +206,6 @@ hr {
   box-shadow: 0 4px 8px 4px rgba(0,0,0,0.6);
 }
 
-.flip-card-back {
-  background-color:#000000;
-  color: #bbb;
-  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.6);
-  transform: rotateX(180deg);
-}
 
 @media screen and (min-width: 991px) {
   .hide-btn {
@@ -220,6 +214,14 @@ hr {
   .flip-card:hover .flip-card-inner {
     transform: rotateX(180deg);
   }
+
+  
+.flip-card-back {
+  background-color:#000000;
+  color: #bbb;
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.6);
+  transform: rotateX(180deg);
+}
 }
 /* 
 @media screen and (max-width: 500px) {
