@@ -188,9 +188,6 @@ hr {
   
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateX(180deg);
-}
 
 .flip-card-front, .flip-card-back {
   position: absolute;
