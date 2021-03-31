@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form - Iscriviti</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <form action='index.html' method="post">
+
+            <h1>Entra nella community</h1>
+
+            <fieldset>
+                <legend><span class="number">1</span>Informazioni</legend>
+                <label for='name'>Nome:</label>
+            <input type="text" name="user_name" id="name">
+            <label for='email'>Email:</label>
+            <input type='email' name="user_email" id='email'>
+            <label for='password'>Password:</label>
+            <input type='password' name='user_password' id='password'>
+            <label for='bio'>Biografia:</label>
+            <textarea id='bio' name='user_bio'></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="number">2</span>Scegli il corso</legend>
+                <label for='corsi'>Scegli:</label>
+            <select id='corsi' name="user_corsi">
+                <option value="none">--</option>
+                <optgroup label="Web Design">  
+                    <option value="primo_logo">Crea il tuo primo logo</option>
+                    <option value="primo_logo">HTML e CSS base</option>
+                    <option value="primo_logo">CSS avanzato</option>
+                    <option value="primo_logo">User Interface</option>                
+                </optgroup>
+                <optgroup label='Programmazione'>
+                    <option value="primo_logo">JavaScript</option>
+                    <option value="primo_logo">PHP</option>        
+                    <option value="primo_logo">Ruby on Rails</option>                    
+                </optgroup>                
+            </select>
+
+            <label>Vuoi ricevere la newsletter?</label>
+            <input type="radio" name="newsletter" id="si_news" value="si_news"><label for="si_news" class="news">Sì</label><br>
+            <input type="radio" name="newsletter" id="no_news" value="no_news"><label for="no_news" class="news">No</label>
+
+            <label>Interessi</label>
+            <input type="checkbox" name="web_design" id="web_design">Web Design<label for="web_design" class="news"></label><br>
+            <input type="checkbox" name="programmazione" id="programmazione">Programmazione<label for="web_design" class="news"></label>
+            </fieldset>
+            
+            
+            
+
+
+            <button type='submit reset'>Iscriviti</button>
+            
+        </form>
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
