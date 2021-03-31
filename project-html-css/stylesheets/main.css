@@ -394,6 +394,10 @@ footer.main a {
 }
 
 @media only screen and (max-width: 767px) {
+
+	#gallery .item {
+		margin: auto;
+	}
   #about .about .profile-pic {
 		display: none;
 	}
