@@ -217,6 +217,9 @@ hr {
   .hide-btn {
     visibility: hidden;
   }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+  }
 }
 /* 
 @media screen and (max-width: 500px) {
