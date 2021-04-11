@@ -1,6 +1,6 @@
 /**  GENERAL */
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 a {
@@ -34,8 +34,6 @@ header {
 .topnav ul li a.left {
   float:left;
 }
-
-
 
 .topnav a:hover {
   color: #ddd; 
@@ -97,24 +95,12 @@ header {
 
 .is-sticky .topnav {
   background: #fff; 
-  transition: 0.8s;  
+  transition: 0.8s;
   }
 
 .is-sticky .topnav a {  
   color: #000000;
 }
-
-/* nav a {
-  color: #fff;
-}
-
-nav a:hover {
-  color: #fff;;
-}
-
-nav li a:hover {
-  color: #f0f0f0bd;
-} */
 
 #hero {
   text-align: center;
@@ -170,6 +156,11 @@ hr {
 
 /******************* PROJECTS ***************/
 
+.description a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
 .projects {
   background-color: #000000;
 }
@@ -186,7 +177,12 @@ hr {
   width: 100%;
   height: 100%;  
   transition: transform 0.6s;
-  transform-style: preserve-3d;  
+  transform-style: preserve-3d;
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -204,35 +200,26 @@ hr {
 }
 
 .flip-card-back {
-background-color:#000000;
-color: #bbb;
-box-shadow: 0 4px 8px 4px rgba(0,0,0,0.6);
-transform: rotateX(180deg);
+  background-color:#000000;
+  color: #bbb;
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.6);
+  transform: rotateX(180deg);
 }
 
 @media screen and (min-width: 991px) {
+
+  .is-sticky .topnav a:hover {
+    background-color: #f0f0f0;
+  }
+
   .hide-btn {
     visibility: hidden;
   }
 
-  .flip-card:hover .flip-card-inner {
-    transform: rotateX(180deg);
+  #projects-cnt {
+    padding-top: 100px;
   }
 }
-
-/* 
-@media screen and (max-width: 500px) {
-  .flip-card {
-    margin: 0;
-    padding-left: 0;    
-  }
-  .flip-card-front {
-    width:100%;
-    height: 500px;
-    
-  }
-
-} */
 
 /****************** FOOTER *******/
 
@@ -247,6 +234,12 @@ footer {
 .card p {
   color: #000;
 }
+
+.card a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
 
 @media screen and (max-width: 767px) {
   .card-dim {
@@ -267,7 +260,7 @@ footer {
   opacity: 0;
 }
 .text-in-viewport {  
-  animation: textFadeInDown 1s forwards ease-in-out;
+  animation: textFadeInDown 1s 0.3s forwards ease-in-out;
 }
 
 .fromLeft-in-viewport {
