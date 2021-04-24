@@ -8,7 +8,7 @@ button.addEventListener('click', function(event) {
  var inputText = searchInput.val();
 
  $.getJSON({
-  url: "http://api.giphy.com/v1/gifs/search?q=" + inputText + "&api_key=70wgCdHMRNqJihmUMKyzsO6yq3Q17nhR",  
+  url: "https://api.giphy.com/v1/gifs/search?q=" + inputText + "&api_key=70wgCdHMRNqJihmUMKyzsO6yq3Q17nhR",  
   success: function(res){
     var gifsData = res.data;
     var gifsWithCategory = gifsData.map(function(gif) {
