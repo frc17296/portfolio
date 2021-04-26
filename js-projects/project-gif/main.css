@@ -17,6 +17,10 @@ body {
   margin: 0;
   padding: 15px;
 }
+ 
+#section .gif-container{
+  margin: 0 auto;
+}
 
 @media only screen and (max-width: 520px) {
 
@@ -31,6 +35,11 @@ body {
     width: 100%;
     margin-bottom: 5px
   }  
+
+  #gifs-container .gif img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 strong {
@@ -111,10 +120,6 @@ strong {
   color: black; 
 }
 
-.gif-container {
-  padding: 30px;  
-}
-
 #gifs-container {
   display: flex;
   flex-wrap: wrap;
@@ -123,11 +128,5 @@ strong {
 
 #gifs-container .gif {
   margin: 0 auto;
-  text-align: center;
+  padding: 10px;
 }
-
-
-
-
-
-
