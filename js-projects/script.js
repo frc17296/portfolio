@@ -4,7 +4,7 @@ var arrow = document.querySelector('.arrow');
 var menu = $('#menu');
 var project1 = document.getElementById('morra-card');
 var project2 = document.getElementById('gif-card');
-
+var projectsSection = document.querySelector("#projects")
 
 list.forEach((el) => {
   
@@ -20,7 +20,8 @@ list.forEach((el) => {
   })
 });
 
-hamburger.addEventListener('click', function() {   
+hamburger.addEventListener('click', function() { 
+  message.style.display = "none";
   menu.animate({
     marginLeft: "+=250px"
   }, "slow")
@@ -32,3 +33,13 @@ arrow.addEventListener('click', function() {
   }, "slow"); 
 });
 
+
+var main = document.querySelector("main");
+const myMessage = `
+<h4> Clicca qui </h4>
+`
+;
+var message = document.createElement("div");
+message.setAttribute("class", "message");
+message.innerHTML = myMessage;
+main.prepend(message);
