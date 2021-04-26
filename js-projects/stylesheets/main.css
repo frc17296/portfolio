@@ -17,7 +17,7 @@
 
  main {
    height: calc(100vh);
- }
+}
 
 #projects {  
   margin: 0;
@@ -27,6 +27,8 @@
   height: 100%;
   position: relative;
 }
+
+
 
 #projects .icon {
   position: absolute;
@@ -154,6 +156,12 @@
 
 .card .button {
   text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    margin: 0 150px;
+  }
 }
 
 @media only screen and (min-width: 992px) {

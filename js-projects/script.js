@@ -7,7 +7,7 @@ var project2 = document.getElementById('gif-card');
 
 
 list.forEach((el) => {
-  console.log(el)
+  
   el.addEventListener('click', function() {
     if(el.classList == "morra") {
       project1.classList.add('is-visible');
@@ -20,7 +20,7 @@ list.forEach((el) => {
   })
 });
 
-hamburger.addEventListener('click', function() {    
+hamburger.addEventListener('click', function() {   
   menu.animate({
     marginLeft: "+=250px"
   }, "slow")
