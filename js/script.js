@@ -19,6 +19,7 @@ const observer = new IntersectionObserver(function(entries, observer) {
     } else {
       
       if (entry.target == text) {
+        console.log(entry);
         entry.target.classList.add('text-in-viewport')
       }
       if (entry.target == desc1) {
@@ -50,12 +51,22 @@ animated.forEach(anim => {
 });
 
 // Hamburger Navbar 
-function myFunction() {
+function toggleHamMenu() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
     ham.style.visibility = 'hidden';
   } else {
     x.className = "topnav";
+  }
+}
+
+// Back to top
+window.onscroll = () => {
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  if(window.pageYOffset > 500) {
+    backToTopBtn.style.display = 'block';
+  } else {
+    backToTopBtn.style.display = 'none'; 
   }
 }
