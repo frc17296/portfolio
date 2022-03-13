@@ -65,8 +65,8 @@ function toggleHamMenu() {
 window.onscroll = () => {
   const backToTopBtn = document.getElementById("backToTopBtn");
   if(window.pageYOffset > 500) {
-    backToTopBtn.style.display = 'block';
+    backToTopBtn.style.visibility = 'visible';
   } else {
-    backToTopBtn.style.display = 'none'; 
+    backToTopBtn.style.visibility = 'hidden'; 
   }
 }
