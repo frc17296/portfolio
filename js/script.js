@@ -70,3 +70,4 @@ window.onscroll = () => {
     backToTopBtn.style.visibility = 'hidden'; 
   }
 }
+
