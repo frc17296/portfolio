@@ -1,6 +1,7 @@
 /**  GENERAL */
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -69,10 +70,6 @@ header {
 @media screen and (max-width: 767px) {
   .topnav {
     background: rgb(155, 153, 153);
-  }
-  .topnav ul li a.active {
-    background-color: #fff;
-    color: #000;
   }
 
   .topnav ul li a.left {
@@ -175,6 +172,7 @@ header {
 .down-CV {
   background-color: #f1f1f1;
   width: 60%;
+  animation: show 2s 0.2s forwards ease-in-out;
 }
 
 .down-CV:hover {
@@ -183,6 +181,17 @@ header {
 
 .down-CV > a:hover {
   color: inherit;
+}
+
+@keyframes show {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
 }
 
 hr .projects-title {
@@ -221,10 +230,6 @@ hr {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateX(180deg);
-}
-
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -259,6 +264,10 @@ hr {
   #projects-cnt {
     padding-top: 100px;
   }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+  }
 }
 
 /****************** FOOTER *******/
@@ -286,11 +295,12 @@ footer {
   color: #000;
 }
 
-@media screen and (max-width: 767px) {
-  .card-dim {
-    width: 70%;
-    padding: 30px;
-  }
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 !important;
 }
 
 .material-icons {
@@ -348,8 +358,26 @@ footer {
 
 /***************** PROJECTS *********************/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 490px) {
   #projects .image {
     display: none;
   }
+
+  .flip-card {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  .flip-card-front {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.project-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
 }

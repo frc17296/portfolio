@@ -26,7 +26,7 @@
     <header>
       <!-- NAVBAR -->
       <div id="myTopnav" class="topnav">
-        <div class="container">
+        <div class="container-fluid">
           <ul>
             <li>
               <a href="#" class="left active" data-attribute="back-to-top">
@@ -38,11 +38,7 @@
             <li><a href="#about">About</a></li>
             <li>
               <div>
-                <a
-                  href="javascript:void(0);"
-                  class="icon"
-                  onclick="toggleHamMenu()"
-                >
+                <a class="icon" onclick="toggleHamMenu()">
                   <i class="fa fa-bars"></i>
                 </a>
               </div>
@@ -99,14 +95,16 @@
     </header>
     <main class="mb-5">
       <!-- ABOUT -->
-      <section id="about" class="p-5">
-        <div class="container-fluid p-5 my-5" id="about-cnt">
-          <div class="row d-flex-lg justify-content-center align-items-center">
+      <section id="about" class="py-5 px-lg-5">
+        <div class="container-fluid my-4 my-sm-5 px-0" id="about-cnt">
+          <div
+            class="d-flex justify-content-center align-items-center flex-column flex-sm-row p-0"
+          >
             <div
               id="text-about"
-              class="col-md-6 text-align-left text-white anim mx-5"
+              class="col-md-6 p-0 text-align-left text-white anim mx-4 mx-lg-5"
             >
-              <h3 class="pt-5">About me</h3>
+              <h3 class="p-0 m-0">About me</h3>
               <hr class="d-block" />
               <p>
                 Ciao! Mi chiamo <em>Francesco Calvi</em> e ti do il benvenuto
@@ -122,7 +120,9 @@
                 programmazione nella creazione di siti web
               </p>
             </div>
-            <div class="col-lg-2 col-md-3 p-2 mx-5 d-flex flex-column">
+            <div
+              class="col-5 col-sm-4 col-md-3 col-lg-2 p-lg-2 mt-5 mt-sm-0 mx-4 mx-lg-5 d-flex flex-column"
+            >
               <img
                 src="./assets/img/about-img.jpg"
                 class="img-fluid rounded-circle"
@@ -158,8 +158,7 @@
 
       <!-- PROJECTS -->
       <section id="projects">
-        <div class="container-fluid p-5">
-          <!-- title -->
+        <div class="container-fluid p-0">
           <div class="container text-center position-relative">
             <div class="projects-title p-5">
               <h2 class="text-black">Projects</h2>
@@ -168,37 +167,13 @@
               />
             </div>
           </div>
-          <!-- curriculum-->
-          <div
-            class="row d-flex justify-content-center align-items-sm-center mb-4 pb-5 p-sm-5"
-          >
-            <div class="col-6 col-sm-3 col-md-4 col-xl-1">
-              <img
-                class="img-fluid"
-                src="./assets/img/curriculum.png"
-                alt="curriculum"
-              />
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pt-5 p-0 p-md-5">
-              <div
-                class="description text-md-center text-left position-relative"
-              >
-                <p class="text-black-50">
-                  Qui ho messo alcuni dei miei progetti, se qualcosa ti ha
-                  colpito o se desideri avere qualche informazione in più non
-                  esitare a <em><a href="#contacts">contattarmi</a></em
-                  >.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <!-- project one-->
-          <div id="projects-cnt" class="container mx-5 px-5">
+          <div id="projects-cnt" class="container-fluid p-0">
+            <!-- project one-->
             <div
-              class="row align-items-center justify-content-center mx-5 px-5 no-gutters"
+              class="row align-items-center justify-content-center px-4 px-sm-5 mx-auto"
             >
-              <div id="img-1" class="col w-50 col-md-2 col-lg-4 anim image">
+              <div id="img-1" class="w-50 col-md-2 col-lg-4 p-0 anim image">
                 <img
                   class="img-fluid"
                   src="./assets/img/vue-logo.png"
@@ -211,9 +186,9 @@
                     <h5>Vue</h5>
                     <hr class="d-block" />
                     <p class="lh-1 mt-4">
-                      Mock up di un sito ecommerce realizzato con Vue
+                      Mock up di un sito e-commerce realizzato con Vue
                     </p>
-                    <div class="btn-container mt-5 text-center">
+                    <div class="btn-container text-center project-btn">
                       <a
                         class="hide-btn"
                         href="https://frc17296.github.io/ecommerce/"
@@ -232,7 +207,7 @@
                     <p class="lh-1 mt-4">
                       Clicca qui sotto per visitare il sito
                     </p>
-                    <div class="btn-container mt-5 text-center">
+                    <div class="btn-container project-btn text-center">
                       <a
                         href="https://frc17296.github.io/ecommerce/"
                         target="_blank"
@@ -246,12 +221,10 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- project two-->
-          <div class="container mx-5 px-5">
+            <!-- project two-->
             <div
-              class="row align-items-center justify-content-center mx-5 px-5 no-gutters"
+              class="row align-items-center justify-content-center mx-auto px-4 px-sm-5"
             >
               <div id="anim-desc-2" class="col w-50 px-0 flip-card anim">
                 <div class="flip-card-inner">
@@ -262,7 +235,7 @@
                       Mock up di un sito di video streaming on demand realizzato
                       con AngularJS
                     </p>
-                    <div class="btn-container mt-4 text-center">
+                    <div class="btn-container mt-4 text-center project-btn">
                       <a
                         class="hide-btn"
                         href="https://frc17296.github.io/streaming-app/"
@@ -280,7 +253,7 @@
                     <p class="lh-1 mt-4">
                       Clicca qui sotto per visitare il sito
                     </p>
-                    <div class="btn-container mt-5 text-center">
+                    <div class="btn-container mt-5 text-center project-btn">
                       <a
                         href="https://frc17296.github.io/streaming-app/"
                         target="_blank"
@@ -293,7 +266,7 @@
                   </div>
                 </div>
               </div>
-              <div id="img-2" class="col col-md-2 col-lg-4 w-50 anim image">
+              <div id="img-2" class="col-md-2 col-lg-4 w-50 p-0 anim image">
                 <img
                   class="img-fluid"
                   src="./assets/img/angular-logo.png"
@@ -301,33 +274,28 @@
                 />
               </div>
             </div>
-          </div>
-          <!-- project three-->
-          <div class="container mx-5 px-5">
+            <!-- project three-->
             <div
-              class="row align-items-center justify-content-center mx-5 px-5 no-gutters"
+              class="row align-items-center justify-content-center mx-auto px-4 px-sm-5"
             >
-              <div id="img-3" class="col col-md-2 col-lg-4 w-50 anim image">
+              <div id="img-3" class="col-md-2 col-lg-4 w-50 p-0 anim image">
                 <img
+                  style="height: 280px; width: 280px"
                   class="img-fluid"
                   src="./assets/img/react-logo.png"
                   alt="form"
                 />
               </div>
-
               <div id="anim-desc-3" class="col w-50 px-0 flip-card anim">
                 <div class="flip-card-inner">
                   <div class="flip-card-front p-4 p-sm-5">
                     <h5>React</h5>
                     <hr class="d-block" />
-                    <p class="lh-1 mt-4">
-                      In questo progetto ho realizzato un tipico form di
-                      registrazione
-                    </p>
-                    <div class="btn-container mt-sm-5 text-center">
+                    <p class="lh-1 mt-4">Todo application con React</p>
+                    <div class="btn-container mt-sm-5 text-center project-btn">
                       <a
                         class="hide-btn"
-                        href="https://frc17296.github.io/ecommerce/"
+                        href="https://frc17296.github.io/todo-app/"
                         target="_blank"
                       >
                         <button type="button" class="btn btn-outline-light">
@@ -343,9 +311,9 @@
                     <p class="lh-1 mt-4">
                       Clicca qui sotto per visitare il sito
                     </p>
-                    <div class="btn-container mt-5 text-center">
+                    <div class="btn-container mt-5 text-center project-btn">
                       <a
-                        href="https://frc17296.github.io/ecommerce/"
+                        href="https://frc17296.github.io/todo-app/"
                         target="_blank"
                       >
                         <button type="button" class="btn btn-outline-light">
@@ -358,22 +326,21 @@
               </div>
             </div>
           </div>
+          <!--projects-cnt-->
         </div>
         <!--container-->
       </section>
-      <!-- PROJECTS-->
+      <!-- projects-->
     </main>
     <footer>
       <section id="contacts" class="mt-5 pt-5">
-        <div class="container mx-auto mt-sm-5">
-          <div class="row align-items-center justify-content-center d-flex">
-            <div
-              class="card-dim col-6 col-md-5 col-lg-4 col-xl-4 mx-sm-5 mx-md-0"
-            >
-              <div class="card shadow-lg p-1 mb-md-5 bg-body rounded">
-                <div
-                  class="card-body text-black-50 text-center my-auto mx-auto"
-                >
+        <div class="container-fluid mx-0 p-0 mt-sm-5">
+          <div
+            class="row align-items-center justify-content-center d-flex flex-column flex-sm-row px-4 px-lg-5"
+          >
+            <div class="card-dim col-9 col-sm-4 col-md-3 p-0 mb-4 mx-0 mx-md-1">
+              <div class="card shadow-lg mb-md-5 bg-body rounded">
+                <div class="card-body text-black-50 text-center mx-auto">
                   <span class="material-icons my-3">local_post_office</span>
                   <h5 class="pb-1">Email</h5>
                   <div>
@@ -385,13 +352,9 @@
               </div>
             </div>
 
-            <div
-              class="card-dim col-6 col-md-5 col-lg-4 col-xl-4 mx-sm-5 mx-md-0"
-            >
-              <div class="card shadow-lg p-1 mb-md-5 bg-body rounded">
-                <div
-                  class="card-body text-black-50 text-center my-auto mx-auto"
-                >
+            <div class="card-dim col-9 col-sm-4 col-md-3 p-0 mb-4 mx-0 mx-md-1">
+              <div class="card shadow-lg mb-md-5 bg-body rounded">
+                <div class="card-body text-black-50 text-center mx-auto">
                   <span class="material-icons my-3">stay_primary_portrait</span>
                   <h5>Telefono</h5>
                   <a href="tel: +393383703419">(+39) 3383703419</a>
@@ -399,16 +362,12 @@
               </div>
             </div>
 
-            <div
-              class="card-dim col-6 col-md-5 col-lg-4 col-xl-4 mx-sm-5 mx-md-0"
-            >
-              <div class="card shadow-lg p-1 mb-md-5 bg-body rounded">
-                <div
-                  class="card-body text-black-50 text-center my-auto mx-auto"
-                >
+            <div class="card-dim col-9 col-sm-4 col-md-3 p-0 mb-4 mx-0 mx-md-1">
+              <div class="card shadow-lg mb-md-5 bg-body rounded">
+                <div class="card-body text-black-50 text-center mx-auto">
                   <span class="material-icons my-3"> location_on </span>
                   <h5 class="text-black-50">Indirizzo</h5>
-                  <p>Milano, Italia</p>
+                  <p class="m-0">Milano, Italia</p>
                 </div>
               </div>
             </div>
