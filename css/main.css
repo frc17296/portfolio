@@ -169,27 +169,33 @@ header {
   min-height: 100vh;
 }
 
-.down-CV {
-  background-color: #f1f1f1;
-  width: 60%;
-  animation: show 2s 0.2s forwards ease-in-out;
+#about-img {
+  opacity: 0;
 }
 
-.down-CV:hover {
+#btn-CV {
+  background-color: #f1f1f1;
+  opacity: 0;
+  width: 60%;
+}
+
+#btn-CV:hover {
   background-color: #dedede;
 }
 
-.down-CV > a:hover {
+#btn-CV > a:hover {
   color: inherit;
+}
+
+#btn-CV.show {
+  animation: show 2s 1.2s forwards ease-in-out;
 }
 
 @keyframes show {
   from {
-    display: none;
     opacity: 0;
   }
   to {
-    display: block;
     opacity: 1;
   }
 }
@@ -201,6 +207,7 @@ hr .projects-title {
 
 hr {
   border: 2px solid rgb(85, 207, 255);
+  background: rgb(85, 207, 255);
   width: 40px;
 }
 
@@ -320,19 +327,39 @@ footer {
 .anim {
   opacity: 0;
 }
-.text-in-viewport {
-  animation: textFadeInDown 1s 0.3s forwards ease-in-out;
+.fromTop-in-viewport {
+  animation: fadeInDown 1s 0.3s forwards ease-in-out;
+}
+
+.zoom-in-viewport {
+  animation: zoomIn 1s 0.3s forwards ease-in-out;
 }
 
 .fromLeft-in-viewport {
-  animation: descFadeInLeft 1s 0.5s forwards ease-in-out;
+  animation: fadeInLeft 1s 0.5s forwards ease-in-out;
 }
 
 .fromRight-in-viewport {
-  animation: descFadeInRight 1s 0.5s forwards ease-in-out;
+  animation: fadeInRight 1s 0.5s forwards ease-in-out;
 }
 
-@keyframes textFadeInDown {
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
   from {
     transform: translateY(-300px);
   }
@@ -342,7 +369,18 @@ footer {
   }
 }
 
-@keyframes descFadeInLeft {
+@keyframes fadeInUp {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
   from {
     transform: translateX(-200px);
     opacity: 0;
@@ -353,7 +391,7 @@ footer {
   }
 }
 
-@keyframes descFadeInRight {
+@keyframes fadeInRight {
   from {
     transform: translateX(200px);
     opacity: 0;
