@@ -166,7 +166,7 @@ header {
 }
 
 #about-cnt {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .down-CV {
@@ -252,6 +252,14 @@ hr {
   transform: rotateX(180deg);
 }
 
+#projects-cnt > div.row {
+  height: 250px;
+}
+
+#projects-cnt > div.row > div {
+  height: 100%;
+}
+
 @media screen and (min-width: 991px) {
   .is-sticky .topnav a:hover {
     background-color: #f0f0f0;
@@ -261,12 +269,12 @@ hr {
     visibility: hidden;
   }
 
-  #projects-cnt {
-    padding-top: 100px;
-  }
-
   .flip-card:hover .flip-card-inner {
     transform: rotateX(180deg);
+  }
+
+  #projects-cnt {
+    max-width: 80%;
   }
 }
 
@@ -372,6 +380,12 @@ footer {
   .flip-card-front {
     background-color: transparent;
     color: rgb(255, 255, 255);
+  }
+}
+
+@media screen and (min-width: 491px) {
+  #projects-cnt > div.row > div {
+    width: 50%;
   }
 }
 
