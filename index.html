@@ -50,7 +50,7 @@
       <!-- BANNER -->
       <div id="hero" class="container align-items-center text-center">
         <div class="title col-md-12">
-          <h1 class="display-3 text-uppercase">Portfolio</h1>
+          <h1 class="display-2">Francesco Calvi</h1>
           <h4>I miei progetti</h4>
         </div>
         <div class="button pt-3">
@@ -96,7 +96,10 @@
     <main class="mb-5">
       <!-- ABOUT -->
       <section id="about" class="py-5 px-lg-5">
-        <div class="container-fluid my-4 my-sm-5 px-0" id="about-cnt">
+        <div
+          class="d-flex justify-content-center align-items-center container-fluid mt-3 mt-sm-0 px-0"
+          id="about-cnt"
+        >
           <div
             class="d-flex justify-content-center align-items-center flex-column flex-sm-row p-0"
           >
@@ -106,18 +109,18 @@
             >
               <h3 class="p-0 m-0">About me</h3>
               <hr class="d-block" />
+              <p>Benvenut*!</p>
               <p>
-                Ciao! Mi chiamo <em>Francesco Calvi</em> e ti do il benvenuto
-                sul mio sito.
-              </p>
-              <p>
-                Qui troverai una serie di progetti realizzati durante il corso
-                di programmazione "Full Stack Developer con Node.js"
-              </p>
-              <p>
-                Ho iniziato questo corso a Febbraio 2021 e mi ha permesso di
-                sviluppare competenze nell'uso dei principali linguaggi di
-                programmazione nella creazione di siti web
+                Mi chiamo <em>Francesco Calvi</em>, ho
+                <span id="age"></span> anni e sono un Software Engineer di
+                Milano.
+                <br />
+                Ho iniziato il mio percorso nel mondo della programmazione per
+                imparare a sviluppare siti web. Ad oggi le mie competenze
+                comprendono HTML - CSS - JS, JQuery, e i framework più
+                utilizzati (React, Vue, Angular). Ho una buona capacità di
+                lavorare sia in team che da solo e sono sempre alla ricerca di
+                nuove collaborazioni, anche come freelancer.
               </p>
             </div>
             <div
@@ -125,7 +128,7 @@
               class="col-5 col-sm-4 col-md-3 col-lg-2 p-lg-2 mt-5 mt-sm-0 mx-4 mx-lg-5 d-flex flex-column"
             >
               <img
-                src="./assets/img/about-img.jpg"
+                src="./assets/img/about-img.png"
                 class="img-fluid rounded-circle"
                 alt="about me"
               />
@@ -160,13 +163,11 @@
       <!-- PROJECTS -->
       <section id="projects">
         <div class="container-fluid p-0">
-          <div class="container text-center position-relative">
-            <div class="projects-title p-5">
-              <h2 class="text-black">Projects</h2>
-              <hr
-                class="d-block h-20 position-absolute bottom-1 start-50 translate-middle-x"
-              />
-            </div>
+          <div class="projects-title pb-5">
+            <h2 class="text-black text-center">Projects</h2>
+            <hr
+              class="m-0 d-block h-20 position-absolute bottom-1 start-50 translate-middle-x"
+            />
           </div>
 
           <div id="projects-cnt" class="container-fluid p-0">
@@ -281,7 +282,6 @@
             >
               <div id="img-3" class="col-md-2 col-lg-4 p-0 anim image">
                 <img
-                  style="height: 280px; width: 280px"
                   class="img-fluid"
                   src="./assets/img/react-logo.png"
                   alt="form"
@@ -469,9 +469,22 @@
     <script src="./js/sticky/jquery.sticky.js"></script>
     <script src="./js/script.js"></script>
     <script>
+      const today = new Date();
+
       document.getElementById(
         "copyright"
-      ).innerHTML = `Copyright © Francesco Calvi ${new Date().getFullYear()}`;
+      ).innerHTML = `Copyright © Francesco Calvi ${today.getFullYear()}`;
+
+      const calcAge = () => {
+        const birthDate = new Date("1996-07-10");
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+        }
+        return age;
+      };
+      document.getElementById("age").innerHTML = `${calcAge()}`;
     </script>
   </body>
 </html>

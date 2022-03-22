@@ -163,10 +163,14 @@ header {
     rgb(0, 0, 0, 0.1) 95%,
     #fff 100%
   );
+
+  padding-top: 52px;
+  padding-bottom: 30px;
 }
 
 #about-cnt {
   min-height: 100vh;
+  margin-bottom: 100px !important;
 }
 
 #about-img {
@@ -279,9 +283,17 @@ hr {
   .flip-card:hover .flip-card-inner {
     transform: rotateX(180deg);
   }
+}
 
+@media screen and (min-width: 860px) {
   #projects-cnt {
     max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  #projects-cnt {
+    max-width: 60%;
   }
 }
 
@@ -332,7 +344,7 @@ footer {
 }
 
 .zoom-in-viewport {
-  animation: zoomIn 1s 0.3s forwards ease-in-out;
+  animation: zoomIn 1s 1s forwards ease-in-out;
 }
 
 .fromLeft-in-viewport {
@@ -403,6 +415,12 @@ footer {
 }
 
 /***************** PROJECTS *********************/
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 490px) {
   #projects .image {
