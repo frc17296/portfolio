@@ -4,6 +4,8 @@ $(".topnav").sticky();
 // Animate on scroll
 const animated = document.querySelectorAll(".anim");
 const text = document.getElementById("text-about");
+const aboutImg = document.getElementById("about-img");
+const btnCV = document.getElementById("btn-CV");
 const desc1 = document.getElementById("anim-desc-1");
 const desc2 = document.getElementById("anim-desc-2");
 const desc3 = document.getElementById("anim-desc-3");
@@ -17,25 +19,27 @@ const observer = new IntersectionObserver(function (entries, observer) {
       return;
     } else {
       if (entry.target == text) {
-        entry.target.classList.add("text-in-viewport");
+        entry.target.classList.add("fromTop-in-viewport");
+        aboutImg.classList.add("zoom-in-viewport");
+        btnCV.classList.add("show");
       }
       if (entry.target == desc1) {
-        entry.target.classList.add("fromRight-in-viewport");
+        entry.target.classList.add("fromLeft-in-viewport");
       }
       if (entry.target == desc2) {
         entry.target.classList.add("fromRight-in-viewport");
       }
       if (entry.target == desc3) {
-        entry.target.classList.add("fromRight-in-viewport");
+        entry.target.classList.add("fromLeft-in-viewport");
       }
       if (entry.target == img1) {
-        entry.target.classList.add("fromLeft-in-viewport");
+        entry.target.classList.add("fromRight-in-viewport");
       }
       if (entry.target == img2) {
         entry.target.classList.add("fromLeft-in-viewport");
       }
       if (entry.target == img3) {
-        entry.target.classList.add("fromLeft-in-viewport");
+        entry.target.classList.add("fromRight-in-viewport");
       }
       observer.unobserve(entry.target);
     }
@@ -67,7 +71,7 @@ window.onscroll = () => {
   }
 };
 
-// Add background image for projects
+// Add projects background images on small screen
 if (window.matchMedia("(max-width: 490px)").matches) {
   desc1.style.background = `linear-gradient(90deg,#0f171e 10%,rgba(15,23,30,.8) 60%,rgba(15,23,30,0.1)), url('./assets/img/vue-logo.png')`;
   desc2.style.background = `linear-gradient(270deg,#0f171e 10%,rgba(15,23,30,.8) 60%,rgba(15,23,30,0.1)), url('./assets/img/angular-logo.png')`;
