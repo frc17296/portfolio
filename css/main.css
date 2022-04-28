@@ -1,3 +1,8 @@
+@import "./hamburgers.css";
+@import "../js/react-components/hamburger/Hamburger.css";
+@import "../js/react-components/nav-item/NavItem.css";
+@import "../js/react-components/navbar/Navbar.css";
+
 /**  GENERAL */
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -13,6 +18,11 @@ a:visited {
   color: inherit;
 }
 
+:root {
+  --color: #f0f0f0bd;
+  --menu-bkgrd: rgb(155, 153, 153);
+}
+
 header {
   background: linear-gradient(
     to bottom,
@@ -22,6 +32,12 @@ header {
     #000000 100%
   );
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+/* BACK TO TOP BUTTON */
 
 #backToTopBtn {
   visibility: hidden;
@@ -37,87 +53,7 @@ header {
   opacity: 1;
 }
 
-/* NAVBAR */
 
-.topnav ul {
-  overflow: hidden;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.topnav ul li a {
-  float: right;
-  display: block;
-  text-align: center;
-  color: #fff;
-  padding: 14px 16px;
-  text-transform: uppercase;
-}
-
-.topnav ul li a.left {
-  float: left;
-}
-
-.topnav a:hover {
-  color: #ddd;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .topnav {
-    background: rgb(155, 153, 153);
-  }
-
-  .topnav ul li a.left {
-    display: block;
-  }
-
-  .topnav ul li a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: right;
-    margin: 0px;
-    margin-right: 10px;
-  }
-
-  .topnav.responsive ul li a.left {
-    margin: 0;
-  }
-  .topnav.responsive ul li a.icon {
-    margin: 0;
-  }
-}
-
-.is-sticky .topnav {
-  background: #fff;
-  transition: 0.8s;
-}
-
-.is-sticky .topnav a {
-  color: #000000;
-}
 
 #hero {
   text-align: center;
@@ -125,7 +61,7 @@ header {
 }
 
 #hero .title {
-  color: #f0f0f0bd;
+  color: var(--color);
   padding: 100px 0;
   margin: 0 auto;
 }
@@ -217,10 +153,6 @@ hr {
 
 /******************* PROJECTS ***************/
 
-.description a:hover {
-  color: #000;
-  text-decoration: underline;
-}
 
 .projects {
   background-color: #000000;
@@ -272,9 +204,7 @@ hr {
 }
 
 @media screen and (min-width: 991px) {
-  .is-sticky .topnav a:hover {
-    background-color: #f0f0f0;
-  }
+  
 
   .hide-btn {
     visibility: hidden;
@@ -318,7 +248,7 @@ footer {
 }
 
 .card a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #000;
 }
 

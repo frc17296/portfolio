@@ -1,0 +1,21 @@
+.hamburger {
+  display: grid;
+}
+
+.is-sticky .hamburger-inner, 
+.is-sticky .hamburger-inner::before, 
+.is-sticky .hamburger-inner::after {
+  background-color: black;
+}
+
+.is-sticky .hamburger.is-active .hamburger-inner, 
+.is-sticky .hamburger.is-active .hamburger-inner::before,
+.is-sticky .hamburger.is-active .hamburger-inner::after {
+  background-color: black;
+}
+
+@media screen and (min-width: 780px) {
+  .hamburger {
+    display: none;
+  }
+}

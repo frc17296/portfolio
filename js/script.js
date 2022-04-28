@@ -1,5 +1,5 @@
 // Sticky Navbar
-$(".topnav").sticky();
+$("#navbar").sticky();
 
 // Animate on scroll
 const animated = document.querySelectorAll(".anim");
@@ -50,17 +50,6 @@ animated.forEach((anim) => {
   observer.observe(anim);
 });
 
-// Hamburger Navbar
-function toggleHamMenu() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-    ham.style.visibility = "hidden";
-  } else {
-    x.className = "topnav";
-  }
-}
-
 // Back to top
 window.onscroll = () => {
   const backToTopBtn = document.getElementById("backToTopBtn");
@@ -76,4 +65,20 @@ if (window.matchMedia("(max-width: 490px)").matches) {
   desc1.style.background = `linear-gradient(90deg,#0f171e 10%,rgba(15,23,30,.8) 60%,rgba(15,23,30,0.1)), url('./assets/img/vue-logo.png')`;
   desc2.style.background = `linear-gradient(270deg,#0f171e 10%,rgba(15,23,30,.8) 60%,rgba(15,23,30,0.1)), url('./assets/img/angular-logo.png')`;
   desc3.style.background = `linear-gradient(90deg,#0f171e 10%,rgba(15,23,30,.8) 60%,rgba(15,23,30,0.1)), url('./assets/img/react-logo.png')`;
+}
+
+// scrollTo
+function scrollToElement(elementName) {
+  let top = 0;
+  if (elementName) {
+    const el = document.querySelector("#" + elementName);
+    top = el.getBoundingClientRect().top;
+    window.scrollBy({
+      top: top,
+      left: 0,
+      behavior: "smooth",
+    });
+  } else {
+    window.scroll(0, 0);
+  }
 }

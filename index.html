@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- React -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- React Components -->
+    <script
+      type="text/babel"
+      src="./js/react-components/hamburger/Hamburger.js"
+    ></script>
+    <script
+      type="text/babel"
+      src="./js/react-components/nav-item/NavItem.js"
+    ></script>
+    <script
+      type="text/babel"
+      src="./js/react-components/navbar/Navbar.js"
+    ></script>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,27 +49,7 @@
   <body>
     <header>
       <!-- NAVBAR -->
-      <div id="myTopnav" class="topnav">
-        <div class="container-fluid">
-          <ul>
-            <li>
-              <a href="#" class="left active" data-attribute="back-to-top">
-                Home</a
-              >
-            </li>
-            <li><a href="#contacts">Contacts</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li>
-              <div>
-                <a class="icon" onclick="toggleHamMenu()">
-                  <i class="fa fa-bars"></i>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div id="navbar" class="topnav"></div>
 
       <!-- BANNER -->
       <div id="hero" class="container align-items-center text-center">
@@ -53,43 +57,41 @@
           <h1 class="display-2">Francesco Calvi</h1>
           <h4>I miei progetti</h4>
         </div>
-        <div class="button pt-3">
-          <a href="#about" class="text-white">
-            <!-- <button type="button"class="btn btn-primary btn-lg fs-6">Start</button> -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="48"
-              height="48"
-              viewBox="0 0 172 172"
-              style="fill: #000000"
+        <div class="button pt-3" onclick="scrollToElement('about')">
+          <svg
+            class="pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="48"
+            height="48"
+            viewBox="0 0 172 172"
+            style="fill: #000000"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
             >
-              <g
-                fill="none"
-                fill-rule="nonzero"
-                stroke="none"
-                stroke-width="1"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="10"
-                stroke-dasharray=""
-                stroke-dashoffset="0"
-                font-family="none"
-                font-weight="none"
-                font-size="none"
-                text-anchor="none"
-                style="mix-blend-mode: normal"
-              >
-                <path d="M0,172v-172h172v172z" fill="none"></path>
-                <g fill="#f0f0f0">
-                  <path
-                    d="M154.75969,48.10625c-0.90031,0.02688 -1.76031,0.40313 -2.39187,1.06156l-66.36781,66.36781l-66.36781,-66.36781c-0.645,-0.67188 -1.53187,-1.03469 -2.45906,-1.04813c-1.41094,0.01344 -2.66063,0.86 -3.19813,2.15c-0.52406,1.30344 -0.215,2.78156 0.79281,3.7625l68.8,68.8c1.34375,1.34375 3.52062,1.34375 4.86437,0l68.8,-68.8c1.02125,-0.98094 1.33031,-2.49937 0.79281,-3.80281c-0.55094,-1.30344 -1.84094,-2.15 -3.26531,-2.12313z"
-                  ></path>
-                </g>
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#f0f0f0">
+                <path
+                  d="M154.75969,48.10625c-0.90031,0.02688 -1.76031,0.40313 -2.39187,1.06156l-66.36781,66.36781l-66.36781,-66.36781c-0.645,-0.67188 -1.53187,-1.03469 -2.45906,-1.04813c-1.41094,0.01344 -2.66063,0.86 -3.19813,2.15c-0.52406,1.30344 -0.215,2.78156 0.79281,3.7625l68.8,68.8c1.34375,1.34375 3.52062,1.34375 4.86437,0l68.8,-68.8c1.02125,-0.98094 1.33031,-2.49937 0.79281,-3.80281c-0.55094,-1.30344 -1.84094,-2.15 -3.26531,-2.12313z"
+                ></path>
               </g>
-            </svg>
-          </a>
+            </g>
+          </svg>
         </div>
       </div>
     </header>
@@ -341,7 +343,7 @@
       <section id="contacts" class="mt-5 pt-5">
         <div class="container-fluid mx-0 p-0 mt-sm-5">
           <div
-            class="row align-items-center justify-content-center d-flex flex-column flex-sm-row px-4 px-lg-5"
+            class="row align-items-center justify-content-center d-flex flex-column flex-sm-row px-4 px-lg-5 m-0"
           >
             <div class="card-dim col-9 col-sm-4 col-md-3 p-0 mb-4 mx-0 mx-md-1">
               <div class="card shadow-lg mb-md-5 bg-body rounded">
@@ -421,10 +423,8 @@
 
     <div id="backToTopBtn" class="mx-2 mx-sm-4 mb-2 mx-4 mb-2">
       <button class="bg-white border-0 rounded-circle p-1">
-        <a href="#">
-          <span
-            class="d-flex justify-content-center align-items-center p-0 p-sm-1"
-          >
+        <a class="pointer" onclick="scrollToElement()">
+          <span class="d-flex justify-content-center align-items-center p-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -472,6 +472,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/sticky/jquery.sticky.js"></script>
     <script src="./js/script.js"></script>
+
     <script>
       const today = new Date();
 
