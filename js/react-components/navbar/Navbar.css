@@ -26,7 +26,7 @@
 @media (max-width: 780px) {
   .navbar {
     position: relative;
-    background: var(--menu-bkgrd);
+    /* background: var(--menu-bkgrd); */
   }
 
   .navItems {

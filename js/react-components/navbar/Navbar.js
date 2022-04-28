@@ -35,7 +35,12 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar">
+      <nav
+        className="navbar"
+        style={{
+          backgroundColor: this.state.isMenuOpen ? "var(--menu-bkgrd)" : "",
+        }}
+      >
         <div className="logo">
           <a className="navLink" onClick={() => scrollToElement()}>
             Home
