@@ -19,7 +19,7 @@
 }
 
 .is-sticky .navbar {
-  background-color: #fff;
+  background-color: #fff !important;
   transition: 0.8s;
 }
 
